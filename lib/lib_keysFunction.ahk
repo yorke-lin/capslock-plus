@@ -21,6 +21,10 @@ keyFunc_run(p){
     return
 }
 
+keyFunc_disable() {
+    return
+}
+
 keyFunc_toggleCapsLock(){
     SetCapsLockState, % GetKeyState("CapsLock","T") ? "Off" : "On"
     return
@@ -54,6 +58,11 @@ keyFunc_mouseSpeedDecrease(){
 
 keyFunc_moveLeft(i:=1){
     SendInput, {left %i%}
+    return
+}
+
+keyFunc_shift() {
+    SendInput, {LShift}
     return
 }
 
